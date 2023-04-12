@@ -15,8 +15,12 @@ class NotFoundController
         string $code,
     ): void
     {
-        self::debugConsole('Not found');
-        $data = ['title' => $code, 'message' => $message, 'code' => $code, 'content' => 'error_pages/404'];
+        $data = [
+            'title' => $code,
+            'message' => $message,
+            'code' => $code,
+            'page' => '404'
+        ];
         new Rendering($data);
     }
 }
