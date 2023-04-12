@@ -11,8 +11,6 @@ class HomeController implements ControllerMethodName
 
     public function index() : void{
 
-        $page = 'home';
-
-        new Rendering([$page]);
+        new Rendering(['page' => 'home']);
     }
 }
