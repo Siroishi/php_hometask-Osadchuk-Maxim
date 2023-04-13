@@ -2,7 +2,7 @@
 - на 19.04.2023: [посилання](https://github.com/SurkovKostiantyn/php_hometask/blob/main/hometask_19_04_2023.md)
 
 ## Посилання на репозиторій:
-https://github.com/SurkovKostiantyn/php_hometask
+[https://github.com/SurkovKostiantyn/php_hometask](https://github.com/SurkovKostiantyn/php_hometask)
 
 ## Структура проекту:
 - `Home/Classes` - класи, інтерфейси, трейти
