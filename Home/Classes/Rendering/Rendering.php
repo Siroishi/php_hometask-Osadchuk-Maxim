@@ -1,17 +1,26 @@
 <?php
 
+/**
+ * Class Rendering
+ * @package Phpcourse\Myproject\Classes\Rendering
+ */
+
 namespace Phpcourse\Myproject\Classes\Rendering;
 
 use Latte\Engine;
 use Phpcourse\Myproject\Classes\Traits\DebugTrait;
+use Phpcourse\Myproject\Classes\Traits\MonologTrait;
 
 class Rendering{
-    use DebugTrait;
+    use DebugTrait, MonologTrait; // використовуємо трейти для налагодження та логування
     public function __construct(array $data){
 
-        $latte = new Engine();
+        self::debugConsole($data); // викликаємо метод debugConsole() з трейту DebugTrait
+        self::debugLog($data); // викликаємо метод debugLog() з трейту MonologTrait
 
-        $latte->render('templates/default/index.latte', $data);
+        $latte = new Engine(); // створюємо об'єкт класу Latte\Engine
+
+        $latte->render('templates/default/index.latte', $data); // відображаємо шаблон
 
     }
 }

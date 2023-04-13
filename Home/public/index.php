@@ -1,23 +1,23 @@
 <?php
-    session_start();
-    $debug = true;
+    session_start(); // Функція для запуску сесії
+    $debug = true; // Параметр, що належить до налагоджувальної інформації
 
-    require_once __DIR__.'/../../vendor/autoload.php';
+    require_once __DIR__.'/../../vendor/autoload.php'; // Автозавантаження класів
 
-
+    // Блок неймспейсів
     use Phpcourse\Myproject\Classes\Controllers\ForumController;
     use Phpcourse\Myproject\Classes\Controllers\HomeController;
     use Phpcourse\Myproject\Classes\Router\Router;
     use Phpcourse\Myproject\Classes\StartApplication;
 
-    $router = new Router();
+    $router = new Router(); // Створюємо об'єкт класу Router
 
+    // Додаємо маршрути
     $router->addRoute('/', HomeController::class, 'index');
     $router->addRoute('/home', HomeController::class, 'index');
-
     $router->addRoute('/forum', ForumController::class, 'index');
 
+    // Створюємо об'єкт класу StartApplication та передаємо йому об'єкт класу Router та запит з адресної стрічки
     $app = new StartApplication($router, $_SERVER['REQUEST_URI'] ?? '/');
-
+    // Запускаємо метод run() класу StartApplication
     $app->run();
-
