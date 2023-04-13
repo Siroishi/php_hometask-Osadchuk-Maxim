@@ -18,6 +18,6 @@
     $router->addRoute('/forum', ForumController::class, 'index');
 
     // Створюємо об'єкт класу StartApplication та передаємо йому об'єкт класу Router та запит з адресної стрічки
-    $app = new StartApplication($router, $_SERVER['REQUEST_URI'] ?? '/');
+    $app = StartApplication::getInstance($router, $_SERVER['REQUEST_URI'] ?? '/');
     // Запускаємо метод run() класу StartApplication
     $app->run();

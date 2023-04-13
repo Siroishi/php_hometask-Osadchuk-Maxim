@@ -22,12 +22,22 @@ class StartApplication
     const CONTROLLER = 1; // константа для індексу масиву з контролером
     const ACTION = 2; // константа для індексу масиву з екшеном
 
+    private static ?StartApplication $instance = null; // Статична змінна для зберігання екземпляру класу
+
     public function __construct(readonly Router $router, string $URI)
     {
         $this->URI = $URI; // записуємо URI в змінну
         $this->routerData = $router; //
         self::debugConsole($this->URI); // викликаємо метод debugConsole() з трейту DebugTrait
         self::debugLog($this->URI); //
+    }
+
+    public static function getInstance(Router $router, string $URI): StartApplication
+    {
+        if (self::$instance === null) {
+            self::$instance = new StartApplication($router, $URI);
+        }
+        return self::$instance; // повертаємо екземпляр класу
     }
 
     public function run(): void{
