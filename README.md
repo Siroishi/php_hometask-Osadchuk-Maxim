@@ -1,8 +1,10 @@
 ## Домашнє завдання:
 - на 19.04.2023: [посилання](https://github.com/SurkovKostiantyn/php_hometask/blob/main/hometask_19_04_2023.md)
 
+## Посилання на репозиторій:
+https://github.com/SurkovKostiantyn/php_hometask
+
 ## Структура проекту:
-- посилання на проєкт: https://github.com/SurkovKostiantyn/php_hometask
 - `Home/Classes` - класи, інтерфейси, трейти
 - `Home/public` - публічні файли, логи, кеш, інші файли, які не потрібно захищати, файл index.php
   - `.gitignore` - файл, який вказує git, які файли не потрібно заливати на сервер
