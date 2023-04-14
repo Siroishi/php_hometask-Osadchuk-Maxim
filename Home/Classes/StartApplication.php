@@ -24,7 +24,7 @@ class StartApplication
 
     private static ?StartApplication $instance = null; // Статична змінна для зберігання екземпляру класу
 
-    public function __construct(readonly Router $router, string $URI)
+    private function __construct(readonly Router $router, string $URI)
     {
         $this->URI = $URI; // записуємо URI в змінну
         $this->routerData = $router; //
