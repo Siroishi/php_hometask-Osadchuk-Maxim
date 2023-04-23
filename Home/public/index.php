@@ -8,7 +8,8 @@
     use Phpcourse\Myproject\Classes\Controllers\ForumController;
     use Phpcourse\Myproject\Classes\Controllers\HomeController;
     use Phpcourse\Myproject\Classes\Controllers\ProfileController;
-
+    use Phpcourse\Myproject\Classes\Controllers\NewsController;
+    
     use Phpcourse\Myproject\Classes\Router\Router;
     use Phpcourse\Myproject\Classes\StartApplication;
 
@@ -18,6 +19,8 @@
     $router->addRoute('/', HomeController::class, 'index');
     $router->addRoute('/home', HomeController::class, 'index');
     $router->addRoute('/forum', ForumController::class, 'index');
+    $router->addRoute('/news', NewsController::class, 'index');
+    
     // /profile
     $router->addRoute('/profile', ProfileController::class, 'index');
 

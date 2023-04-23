@@ -1,10 +1,5 @@
 <?php
 
-/**
- * Class ForumController
- * @package Phpcourse\Myproject\Classes\Controllers
- */
-
 namespace Phpcourse\Myproject\Classes\Controllers;
 
 use Phpcourse\Myproject\Classes\Interfaces\ControllerMethodName;
